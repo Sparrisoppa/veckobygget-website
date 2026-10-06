@@ -1,0 +1,79 @@
+name: GitHub Pages
+
+# Builds the site and publishes it with GitHub Pages.
+# The address comes from the repository's Pages settings, so it switches
+# to your own domain once one is set under Settings → Pages → Custom domain.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  HUGO_VERSION: "0.167.0"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install Hugo
+        run: |
+          curl -fsSL -o hugo.deb \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          sudo dpkg -i hugo.deb
+
+      - id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Build
+        env:
+          HUGO_ENVIRONMENT: production
+        run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+  # Fetch the published home page and fail if it isn't the Hugo site.
+  verify:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check the live site
+        env:
+          URL: ${{ needs.deploy.outputs.page_url }}
+        run: |
+          for i in 1 2 3 4 5 6; do
+            html=$(curl -fsSL -H 'Cache-Control: no-cache' "${URL}?v=${GITHUB_RUN_ID}-${i}") || html=""
+            if grep -q 'class="nav"\|class=nav' <<<"$html"; then
+              title=$(grep -o '<title>[^<]*' <<<"$html" | head -1 | sed 's/<title>//')
+              echo "::notice title=Live site OK::${URL} serves the Hugo site (title: ${title})"
+              exit 0
+            fi
+            sleep 20
+          done
+          echo "::error title=Live site check failed::${URL} does not serve the Hugo site. First 300 chars: $(head -c 300 <<<"$html" | tr '\n' ' ')"
+          exit 1
