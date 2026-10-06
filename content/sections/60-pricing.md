@@ -10,9 +10,9 @@ main:
   tag: "Engångskostnad"
   suffix: "exkl. moms"
   features:
-    - text: "32 timmars arbete: förstudie, utveckling & test"
-    - text: "Godkänd leveransbeskrivning"
-    - text: "Integrationer & AI-flöde"
+    - text: "32 timmars arbete: teknisk design, utveckling, test och dokumentation."
+    - text: "Kopplat till de system ni redan använder"
+    - text: "Fast pris, avtalat innan vi börjar"
     - text: "1 månad Drift & Support: Plus ingår"
       key: true
   cta: { text: "Boka startmöte", href: "#kontakt" }
