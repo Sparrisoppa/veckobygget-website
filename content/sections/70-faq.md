@@ -20,6 +20,8 @@ items:
     a: "Ja. Allt som byggs körs på era konton och tillhör er."
   - q: "Kan vi bygga vidare efteråt?"
     a: "Ja. Löpande justeringar och mindre förbättringar ingår i Plus-paketet med 2 timmar i månaden. Större tillägg gör vi som en ny byggnation till samma fasta pris. Vid behov går det också att köpa fristående timmar."
+  - q: "Tillkommer det några löpande kostnader?"
+    a: "Bara för de tjänster som lösningen använder, till exempel AI-modeller. Det brukar landa på några hundra kronor i månaden och betalas direkt till leverantören, så ni har full koll. Driftpaketen är frivilliga."
   - q: "Måste vi teckna ett driftpaket?"
     a: "Nej. Den första månaden ingår Plus i byggnationen. Därefter väljer ni själva om ni vill fortsätta, inget förnyas automatiskt. Ett driftpaket rekommenderas om lösningen är kopplad till andra system som uppdateras regelbundet."
 ---
