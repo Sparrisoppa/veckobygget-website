@@ -1,7 +1,7 @@
 ---
 # Home page: the hero at the top. The rest of the page is built from content/sections/.
 title: "Veckobygget.se"
-headline: "Automatisk administration och Företags-AI."
+headline: "Automatiserad administration och företags-AI."
 highlight: "Byggt på en vecka."
 
 # The price itself comes from `price` in hugo.toml.
@@ -10,7 +10,7 @@ sticker:
   suffix: "exkl. moms"
   link: { text: "Räkna på vad det sparar →", href: "#rakna" }
 
-intro: "Vi hjälper svenska småföretag att effektivisera logistik, marknad, kundtjänst och sälj. Inga löpande konsulttimmar – bara tydligt avgränsade lösningar till fast pris."
+intro: "Vi hjälper svenska småföretag att effektivisera logistik, marknadsföring, kundtjänst och sälj. Inga löpande konsulttimmar – bara tydligt avgränsade lösningar till fast pris."
 cta_primary: { text: "Boka ett första samtal", href: "#kontakt" }
 cta_secondary: { text: "Se vad vi kan bygga →", href: "#vad-vi-bygger" }
 

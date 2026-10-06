@@ -10,7 +10,7 @@ disableKinds = ["taxonomy", "term", "RSS"]
 
 [params]
   brand = "Veckobygget.se"
-  tagline = "Automatisk administration och Företags-AI"
+  tagline = "Automatiserad administration och företags-AI"
   description = "Vi hjälper svenska småföretag att effektivisera lager, logistik, marknad och sälj. Tydligt avgränsade lösningar till fast pris, byggda på en vecka."
 
   # "orange" or "green"
