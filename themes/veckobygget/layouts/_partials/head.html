@@ -12,7 +12,7 @@
 {{- end }}
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:locale" content="{{ site.Language.Locale | default "sv" | replace "-" "_" }}">
+<meta property="og:locale" content="{{ replace (site.Language.Locale | default "sv-SE") "-" "_" }}">
 <link rel="canonical" href="{{ .Permalink }}">
 <meta name="theme-color" content="#F8F9FA">
 <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
@@ -22,3 +22,4 @@
 <link rel="preload" href="{{ printf "fonts/%s.woff2" . | relURL }}" as="font" type="font/woff2" crossorigin>
 {{- end }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}"{{ with $css.Data.Integrity }} integrity="{{ . }}"{{ end }}>
+{{- if .IsHome }}{{ partial "schema.html" . }}{{ end }}

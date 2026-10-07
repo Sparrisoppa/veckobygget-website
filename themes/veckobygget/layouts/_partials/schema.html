@@ -1,0 +1,110 @@
+{{- /* Structured data (JSON-LD) for search engines: the company, its offers,
+      the contact person, the site and the FAQ. Everything is read from
+      hugo.toml and content/sections/, so it stays in sync with the page. */}}
+{{- $home := site.Home.Permalink }}
+{{- $orgID := printf "%s#organization" $home }}
+{{- $personID := printf "%s#person" $home }}
+{{- $currency := "SEK" }}
+{{- $graph := slice }}
+
+{{- /* Offers: the fixed-price build and the support plans. */}}
+{{- $offers := slice }}
+{{- $pricing := site.GetPage "/sections/60-pricing" }}
+{{- with $pricing }}
+  {{- with .Params.main }}
+    {{- $features := slice }}
+    {{- range .features }}{{ $features = $features | append (strings.TrimSuffix "." .text) }}{{ end }}
+    {{- $offers = $offers | append (dict
+      "@type" "Offer"
+      "name" .name
+      "price" (string (int site.Params.price))
+      "priceCurrency" $currency
+      "priceSpecification" (dict "@type" "PriceSpecification" "price" (string (int site.Params.price)) "priceCurrency" $currency "valueAddedTaxIncluded" false)
+      "itemOffered" (dict "@type" "Service" "name" .name "description" (printf "%s." (delimit $features ". ")))
+      "url" (printf "%s#%s" $home ($pricing.Params.anchor | default "priser"))
+    ) }}
+  {{- end }}
+  {{- range .Params.plans }}
+    {{- $offers = $offers | append (dict
+      "@type" "Offer"
+      "name" .name
+      "price" (string (int .price))
+      "priceCurrency" $currency
+      "priceSpecification" (dict "@type" "UnitPriceSpecification" "price" (string (int .price)) "priceCurrency" $currency "unitCode" "MON" "valueAddedTaxIncluded" false)
+      "itemOffered" (dict "@type" "Service" "name" .name "description" (.text | markdownify | plainify | htmlUnescape))
+    ) }}
+  {{- end }}
+{{- end }}
+
+{{- /* Services listed under "Vad vi bygger". */}}
+{{- $services := slice }}
+{{- with site.GetPage "/sections/20-services" }}
+  {{- range .Params.items }}
+    {{- $services = $services | append (dict "@type" "Service" "name" .title "description" .body "provider" (dict "@id" $orgID)) }}
+  {{- end }}
+{{- end }}
+
+{{- /* The company. */}}
+{{- $org := dict
+  "@type" "ProfessionalService"
+  "@id" $orgID
+  "name" (site.Params.company.name | default site.Title)
+  "alternateName" (site.Params.brand | default site.Title)
+  "url" $home
+  "description" site.Params.description
+  "slogan" site.Params.tagline
+  "image" ("favicon.svg" | absURL)
+  "areaServed" (dict "@type" "Country" "name" "Sverige")
+}}
+{{- with site.Params.company }}
+  {{- with .email }}{{ $org = merge $org (dict "email" .) }}{{ end }}
+  {{- with .phone }}{{ $org = merge $org (dict "telephone" .) }}{{ end }}
+  {{- with .address }}{{ $org = merge $org (dict "address" .) }}{{ end }}
+{{- end }}
+{{- with $offers }}
+  {{- $org = merge $org (dict "makesOffer" .) }}
+{{- end }}
+{{- with $services }}
+  {{- $org = merge $org (dict "hasOfferCatalog" (dict "@type" "OfferCatalog" "name" "Vad vi bygger" "itemListElement" (apply . "dict" "@type" "Offer" "itemOffered" "."))) }}
+{{- end }}
+
+{{- /* The contact person from the contact section. */}}
+{{- with site.GetPage "/sections/80-contact" }}
+  {{- with .Params.person }}
+    {{- $person := dict "@type" "Person" "@id" $personID "name" .name "jobTitle" .role "worksFor" (dict "@id" $orgID) }}
+    {{- with .photo }}{{ with resources.Get . }}
+      {{- $img := .Resize "400x webp q85" }}
+      {{- $person = merge $person (dict "image" $img.Permalink) }}
+    {{- end }}{{ end }}
+    {{- $graph = $graph | append $person }}
+    {{- $org = merge $org (dict "founder" (dict "@id" $personID)) }}
+  {{- end }}
+{{- end }}
+{{- $graph = $graph | append $org }}
+
+{{- /* The site itself. */}}
+{{- $graph = $graph | append (dict
+  "@type" "WebSite"
+  "@id" (printf "%s#website" $home)
+  "name" site.Title
+  "url" $home
+  "inLanguage" site.Language.Locale
+  "publisher" (dict "@id" $orgID)
+) }}
+
+{{- /* FAQ. */}}
+{{- with site.GetPage "/sections/70-faq" }}
+  {{- $questions := slice }}
+  {{- range .Params.items }}
+    {{- $questions = $questions | append (dict
+      "@type" "Question"
+      "name" .q
+      "acceptedAnswer" (dict "@type" "Answer" "text" (.a | markdownify | plainify | htmlUnescape))
+    ) }}
+  {{- end }}
+  {{- with $questions }}
+    {{- $graph = $graph | append (dict "@type" "FAQPage" "@id" (printf "%s#faq" $home) "inLanguage" site.Language.Locale "mainEntity" .) }}
+  {{- end }}
+{{- end }}
+
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" $graph | jsonify | safeJS }}</script>

@@ -1,7 +1,6 @@
 # Site settings. Text lives in content/, the look in themes/veckobygget/.
 baseURL = "https://sparrisoppa.github.io/veckobygget-website/"
-locale = "sv"
-languageCode = "sv-SE"
+locale = "sv-SE"
 title = "Veckobygget.se"
 theme = "veckobygget"
 
