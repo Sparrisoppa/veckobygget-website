@@ -35,7 +35,7 @@ disableKinds = ["taxonomy", "term", "RSS"]
       "Frilans Finans Sverige AB · Org.nr. 556802-1199",
     ]
     email = "hej@veckobygget.se"
-    phone = ""  # Lämna tomt för att dölja i footern
+    phone = "079-325 40 75"  # Lämna tomt för att dölja i footern
     address = "Rekordvägen 12, 134 50, Gustavsberg"
 
   # ---- Cal.com booking ----------------------------------------------------
