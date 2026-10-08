@@ -29,7 +29,7 @@ disableKinds = ["taxonomy", "term", "RSS"]
 
   # Footer.
   [params.company]
-    name = "Veckobygget Konsult"
+    name = "Veckobygget"
     legal = [
       "Verksamheten bedrivs genom egenanställning hos Frilans Finans Sverige AB.",
       "Frilans Finans Sverige AB · Org.nr. 556802-1199",
