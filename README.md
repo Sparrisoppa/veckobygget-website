@@ -40,6 +40,14 @@ The contact section embeds a [Cal.com](https://cal.com) booking calendar in plac
 
 Until `link` is set, the section shows an e-mail button instead. If you self-host Cal.com, set `origin` too. In Cal.com you can also set the confirmation redirect, e-mails and the intake questions (name, company, "what do you want to simplify?").
 
+## Umami analytics
+
+Add the site to [Umami](https://umami.is), then open **Settings → Websites → Tracking code**. In `hugo.toml`, set `website_id` under `[params.umami]` to the Website ID from that code. This ID is public and is not an API key.
+
+`script_url` defaults to Umami Cloud's `https://cloud.umami.is/script.js`. If you self-host Umami, replace it with your tracking script URL.
+
+Analytics loads automatically in production builds (`hugo --gc --minify` and GitHub Pages). `hugo server` uses the development environment and omits the tracker. Leaving `website_id` empty disables analytics.
+
 ## Running it locally
 
 Install Hugo **extended**, version 0.146 or newer (`brew install hugo`, `winget install Hugo.Hugo.Extended`, or a [release binary](https://github.com/gohugoio/hugo/releases)). Then:

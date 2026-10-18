@@ -22,3 +22,8 @@
 <link rel="preload" href="{{ printf "fonts/%s.woff2" . | relURL }}" as="font" type="font/woff2" crossorigin>
 {{- end }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}"{{ with $css.Data.Integrity }} integrity="{{ . }}"{{ end }}>
+{{- if hugo.IsProduction }}
+{{- with site.Params.umami.website_id }}
+<script defer src="{{ site.Params.umami.script_url | default "https://cloud.umami.is/script.js" }}" data-website-id="{{ . }}"></script>
+{{- end }}
+{{- end }}

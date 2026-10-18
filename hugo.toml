@@ -27,6 +27,12 @@ disableKinds = ["taxonomy", "term", "RSS"]
     text = "Boka gratis rådgivning"
     href = "#kontakt"
 
+  # Umami analytics: copy the Website ID from Settings → Websites → Tracking code.
+  # Loaded only in production builds, and only when website_id is set.
+  [params.umami]
+    website_id = "61600d0f-9f4a-4f9a-96e0-407ac14765a6"
+    script_url = "https://cloud.umami.is/script.js"  # change for self-hosted Umami
+
   # Footer.
   [params.company]
     name = "Veckobygget Konsult"
