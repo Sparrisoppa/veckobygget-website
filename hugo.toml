@@ -65,3 +65,4 @@ disableKinds = ["taxonomy", "term", "RSS"]
 
 [minify.tdewolff.html]
   keepWhitespace = false
+  keepQuotes = true
