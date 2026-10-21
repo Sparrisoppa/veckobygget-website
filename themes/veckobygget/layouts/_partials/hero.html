@@ -1,36 +1,49 @@
 {{- $p := .Params }}
+{{- $price := printf "%s %s" (partial "price.html" site.Params.price) (site.Params.currency | default "kr") }}
 <section class="hero">
-  <div class="wrap">
-    <div class="hero__top">
+  <div class="wrap hero__grid">
+    <div class="hero__text">
+      {{- with $p.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
       <h1>{{ $p.headline }} {{ with $p.highlight }}<em>{{ . }}</em>{{ end }}</h1>
-      {{- with $p.sticker }}
-      <div class="sticker">
-        <strong>{{ .title }}</strong>
-        <span>{{ partial "price.html" site.Params.price }} {{ site.Params.currency | default "kr" }} {{ .suffix }}</span>
-        {{- with .link }}<a href="{{ .href }}">{{ .text }}</a>{{ end }}
-      </div>
-      {{- end }}
-    </div>
-    <div class="hero__intro">
-      <p>{{ $p.intro }}</p>
+      <p class="hero__intro">{{ $p.intro }}</p>
       <div class="hero__cta">
         {{- with $p.cta_primary }}<a class="btn" href="{{ .href }}">{{ .text }}</a>{{ end }}
         {{- with $p.cta_secondary }}<a class="btn btn--ghost" href="{{ .href }}">{{ .text }}</a>{{ end }}
       </div>
+      {{- with $p.checks }}
+      <ul class="checks">
+        {{- range . }}<li>{{ replaceRE `\{price\}` $price . }}</li>{{ end }}
+      </ul>
+      {{- end }}
     </div>
-    {{- with $p.flow }}
-    <div class="flow">
-      <div class="flow__steps">
-        {{- range .steps }}
-        <div class="flow__step{{ if .decision }} flow__step--decision{{ end }}">
-          <div class="flow__meta"><span>{{ .label }}</span><span>{{ .time }}</span></div>
-          <strong>{{ .title }}</strong>
-          <p>{{ .body }}</p>
+    <div class="hero__visual">
+      {{- with $p.board }}
+      <figure class="board">
+        <div class="board__head"><strong>{{ .title }}</strong><span>{{ .note }}</span></div>
+        <div class="board__cols">
+          {{- range .columns }}
+          <div class="board__col">
+            <span class="board__name">{{ .name }}</span>
+            {{- range .cards }}
+            <div class="board__card">
+              <p><b>{{ .id }}</b> {{ .text }}</p>
+              {{- with .flag }}<span class="tag tag--{{ .kind }}">{{ .text }}</span>{{ end }}
+              {{- with .meta }}<small>{{ . }}</small>{{ end }}
+            </div>
+            {{- end }}
+          </div>
+          {{- end }}
         </div>
-        {{- end }}
+        <figcaption>{{ .caption }}</figcaption>
+      </figure>
+      {{- end }}
+      {{- with $p.sticker }}
+      <div class="sticker">
+        <strong>{{ .title }}</strong>
+        <span>{{ $price }} {{ .suffix }}</span>
+        {{- with .link }}<a href="{{ .href }}">{{ .text }}</a>{{ end }}
       </div>
-      <div class="flow__foot"><span>{{ .caption_left }}</span><span>{{ .caption_right }}</span></div>
+      {{- end }}
     </div>
-    {{- end }}
   </div>
 </section>

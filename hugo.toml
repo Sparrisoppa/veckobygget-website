@@ -24,7 +24,7 @@ disableKinds = ["taxonomy", "term", "RSS"]
   # Button at the end of the top menu. The links to the page sections are
   # generated from content/sections/ (every file with `nav` and `anchor`).
   [params.nav_cta]
-    text = "Boka gratis rådgivning"
+    text = "Boka behovssamtal"
     href = "#kontakt"
 
   # Umami analytics: copy the Website ID from Settings → Websites → Tracking code.
@@ -34,6 +34,7 @@ disableKinds = ["taxonomy", "term", "RSS"]
     script_url = "https://cloud.umami.is/script.js"  # change for self-hosted Umami
 
   # Footer.
+  footer_text = "Automatiserad administration för småföretag i Stockholm, Värmdö och hela Sverige"
   [params.company]
     name = "Veckobygget Konsult"
     legal = [

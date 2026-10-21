@@ -1,16 +1,17 @@
-<section class="section--white"{{ with .Params.anchor }} id="{{ . }}"{{ end }}>
-  <div class="section wrap">
-    <div class="section-head">
-      <h2 class="h2">{{ .Title }}</h2>
-      {{- with .Params.count_label }}<span class="label">{{ . }}</span>{{ end }}
-    </div>
-    <div class="services">
-      {{- range $i, $s := .Params.items }}
-      <div class="service">
-        <div class="service__title"><span class="service__n">{{ printf "%02d" (add $i 1) }}</span><h3>{{ $s.title }}</h3></div>
-        <p>{{ $s.body }}</p>
-      </div>
-      {{- end }}
-    </div>
+<section class="section wrap services"{{ with .Params.anchor }} id="{{ . }}"{{ end }}>
+  <div class="section-intro">
+    <h2 class="h2">{{ .Title }}</h2>
+    {{- with .Params.intro }}<p class="lead">{{ . }}</p>{{ end }}
   </div>
+  <div class="cards">
+    {{- range .Params.items }}
+    <div class="card">
+      {{- with .icon }}{{ partial "icon.html" . }}{{ end }}
+      <h3>{{ .title }}</h3>
+      <p>{{ .body }}</p>
+      {{- with .link }}<a class="link" href="{{ .href }}">{{ .text }}</a>{{ end }}
+    </div>
+    {{- end }}
+  </div>
+  {{- with .Params.note }}<p class="services__note">{{ . }}</p>{{ end }}
 </section>

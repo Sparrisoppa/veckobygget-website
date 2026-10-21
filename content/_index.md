@@ -1,8 +1,17 @@
 ---
 # Home page: the hero at the top. The rest of the page is built from content/sections/.
 title: "Veckobygget.se"
-headline: "För företag som har vuxit ur"
-highlight: "att ha allt i huvudet."
+eyebrow: "För företag som har vuxit ur att ha allt i huvudet"
+headline: "Automatisera administrationen i småföretaget,"
+highlight: "utan att byta system."
+intro: "Vi får era befintliga system och er inkorg att hålla koll på ordrar, lager och kundfrågor, och lägga fram färdiga förslag när ni behöver bestämma något."
+cta_primary: { text: "Boka ett gratis behovssamtal", href: "#kontakt" }
+cta_secondary: { text: "Se ett exempel", href: "#exempel" }
+# {price} is filled in from `price` in hugo.toml.
+checks:
+  - "Fast pris {price} exkl. moms"
+  - "Klart på en vecka"
+  - "Fungerar med de system ni redan har"
 
 # The price itself comes from `price` in hugo.toml.
 sticker:
@@ -10,29 +19,28 @@ sticker:
   suffix: "exkl. moms"
   link: { text: "Räkna på vad det sparar →", href: "#rakna" }
 
-intro: "Vi får era befintliga system, som Fortnox, webbshopen och mejlen, att hålla koll på ordrar, lager och uppföljning åt er, och säga till när ni behöver bestämma något. Byggt på en vecka, till fast pris."
-cta_primary: { text: "Boka ett första samtal", href: "#kontakt" }
-cta_secondary: { text: "Se vad vi bygger →", href: "#vad-vi-bygger" }
-
-flow:
-  caption_left: "Exempel: ett kundmejl blir ett färdigt beslut"
-  caption_right: "Läs · bedöm · föreslå · du godkänner · det händer"
-  steps:
-    - label: "1 · Läser mejlet"
-      time: "08:14"
-      title: "”Samma som förra året”"
-      body: "Löparklubben Norr vill ha 200 t-shirts med tryck till sitt lopp den 14 juni."
-    - label: "2 · Bedömer"
-      time: "08:14"
-      title: "Hittar förra beställningen"
-      body: "Hittar förra årets order i Fortnox: samma motiv, färg och storleksfördelning."
-    - label: "3 · Bedömer"
-      time: "08:14"
-      title: "Lager & produktion"
-      body: "Tröjor finns för 160 st. Tryckeriet har plats vecka 22, så leverans hinns i tid."
-    - label: "4 · Du godkänner"
-      time: "08:15"
-      title: "⚠ 40 tröjor måste köpas in"
-      body: "Offert och inköpslista är klara. Du godkänner, sedan skickas båda."
-      decision: true
+# The example board to the right of the headline.
+# `flag` is "ok" (green) or "warn" (accent).
+board:
+  title: "Ordertavla"
+  note: "Uppdateras automatiskt från affärssystemet"
+  caption: "Exempel: nya ordrar blir kort, tillverkningen planeras och det som saknas flaggas i tid."
+  columns:
+    - name: "Ny order"
+      cards:
+        - id: "#1043"
+          text: "Bänkar, 12 st"
+          meta: "Leverans v. 47"
+    - name: "Planerad"
+      cards:
+        - id: "#1039"
+          text: "Skåp, 4 st"
+          meta: "Tillverkas 3–5 nov"
+          flag: { kind: "ok", text: "Material finns" }
+    - name: "Väntar material"
+      cards:
+        - id: "#1041"
+          text: "Skyltar, 30 st"
+          flag: { kind: "warn", text: "Saknas: 12 m² ek" }
+          meta: "Inköpsförslag klart att godkänna"
 ---

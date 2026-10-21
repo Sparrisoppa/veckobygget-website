@@ -1,12 +1,15 @@
 {{- with site.Params.company }}
 <footer class="footer">
-  <div class="wrap">
-    <div><strong>{{ .name }}</strong>{{ range .legal }}<span>{{ . }}</span>{{ end }}</div>
-    <div>
+  <div class="wrap footer__bar">
+    <p><strong>{{ site.Params.brand | default site.Title }}</strong>{{ with site.Params.footer_text }} · {{ . }}{{ end }}</p>
+    <p>
       {{- with .email }}<a href="mailto:{{ . }}">{{ . }}</a>{{ end }}
-      {{- with .phone }}<span>{{ . }}</span>{{ end }}
-    </div>
-    <div><span>{{ .address }}</span><span>Copyright © {{ now.Year }} {{ site.Params.brand | default site.Title }}</span></div>
+      {{- with .phone }} · <a href="tel:{{ replaceRE `[^0-9+]` "" . }}">{{ . }}</a>{{ end }}
+    </p>
+  </div>
+  <div class="wrap footer__legal">
+    <p>{{ .name }}{{ range .legal }} · {{ . }}{{ end }}</p>
+    <p>{{ .address }} · Copyright © {{ now.Year }} {{ site.Params.brand | default site.Title }}</p>
   </div>
 </footer>
 {{- end }}
