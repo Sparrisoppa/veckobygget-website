@@ -1,11 +1,15 @@
 ---
-title: "Vanliga frågor"
+title: "Vanliga frågor om automatisering"
 block: faq
 weight: 70
-# Answers are Markdown. The first question starts open.
+# Answers are Markdown. The first question starts open. {price} is filled in from hugo.toml.
 items:
   - q: "Vad hinner man få gjort på en vecka?"
     a: "Ofta mer än man tror. En vecka räcker för att ta hand om de beslut som tar mest tid hos er i dag, och det kan gott vara flera. Det kan vara att kundmejl blir färdiga offertförslag, att nya ordrar planeras in och stäms av mot lagret, eller en daglig lista över kunder och offerter som behöver följas upp. Vad som ingår bestämmer vi tillsammans i leveransbeskrivningen innan vi börjar."
+  - q: "Kan man automatisera Fortnox?"
+    a: "Ja. Fortnox har ett öppet API, så ordrar, kunder, artiklar och lagersaldon kan läsas och uppdateras automatiskt. Vi bygger till exempel flöden som lägger in ordrar från webbshopen, föreslår inköp när lagret börjar ta slut eller påminner om offerter som inte fått svar."
+  - q: "Vad kostar det att automatisera i ett småföretag?"
+    a: "Ett bygge kostar {price} exkl. moms, till fast pris och avtalat innan vi börjar. Det motsvarar en veckas arbete (32 timmar) och den första månaden med Drift & Support: Plus ingår. Räkna på [hur snabbt det betalar sig](#rakna)."
   - q: "Gör AI:n saker på egen hand?"
     a: "Nej. Regler och AI gör bedömningen och förbereder ett förslag, men en människa godkänner alltid innan något skickas, skapas eller flyttas."
   - q: "Vad gör ni inte?"
@@ -14,7 +18,7 @@ items:
     a: "Leveransbeskrivningen är avgränsad så att den ryms i 32 timmar. Skulle något ändå dra över gör vi klart det som ingår i leveransbeskrivningen utan extra kostnad."
   - q: "När kan ni leverera?"
     a: "Det beror på hur många projekt vi har inbokade just nu. När vi har gått igenom ert behov får ni en bekräftad leveransvecka. Priset är alltid fast och motsvarar en veckas arbete (32 timmar), oavsett när leveransen sker."
-  - q: "Vilka system kan ni koppla ihop?"
+  - q: "Vilka system kan ni koppla ihop och automatisera?"
     a: "De flesta vanliga system, till exempel Fortnox, Visma, Shopify, WooCommerce, HubSpot, Google Workspace och Microsoft 365. Ni behöver inte byta något, vi bygger ovanpå det ni redan har."
   - q: "Hur hanteras vår data?"
     a: "Vi följer GDPR, använder i första hand leverantörer med datalagring inom EU och tecknar personuppgiftsbiträdesavtal vid behov."

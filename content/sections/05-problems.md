@@ -3,7 +3,7 @@ title: "Känner du igen dig?"
 block: services
 weight: 5
 anchor: "kanner-du-igen-dig"
-count_label: "Det vi oftast hör"
+count_label: "Vanliga problem i växande småföretag"
 items:
   - title: "”Jag har inte koll på vad som ska göras när.”"
     body: "Ordrar ligger i Fortnox, i mejlen och på lappar. Överblicken finns bara i huvudet."

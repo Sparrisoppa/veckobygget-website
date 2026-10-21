@@ -1,5 +1,5 @@
 ---
-title: "Vad vi bygger"
+title: "Vad vi automatiserar åt småföretag"
 block: services
 weight: 20
 nav: "Vad vi bygger"
@@ -9,9 +9,9 @@ items:
   - title: "Vad ska göras när?"
     body: "Nya ordrar läses från Fortnox, webbshopen och mejlen och samlas i en plan. Ni ser vad som ska tillverkas eller levereras, och i vilken ordning, utan att behöva hålla det i huvudet."
   - title: "Vad behöver köpas in?"
-    body: "Ordrarna stäms av mot lagret innan något tar slut. Ni får en färdig inköpslista att godkänna, i stället för en akutbeställning mitt i en order."
+    body: "Ordrarna stäms av mot lagret innan något tar slut. Ni får ett automatiskt inköpsförslag att godkänna, i stället för en akutbeställning mitt i en order."
   - title: "Vad ska offereras?"
-    body: "Förfrågningar sorteras och bedöms när de kommer in. Underlag och offertförslag är klara samma dag, så att kunden inte hinner fråga någon annan."
+    body: "Förfrågningar från mejl och webbformulär sorteras och bedöms när de kommer in. Underlag och offertförslag är klara samma dag, så att kunden inte hinner fråga någon annan."
   - title: "Vem behöver följas upp?"
     body: "Offerter som aldrig fick svar och kunder som slutat beställa flaggas i tid, med ett färdigt mejl att skicka."
   - title: "Vad svarar vi kunden?"

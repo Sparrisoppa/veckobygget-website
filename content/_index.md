@@ -10,7 +10,7 @@ sticker:
   suffix: "exkl. moms"
   link: { text: "Räkna på vad det sparar →", href: "#rakna" }
 
-intro: "Vi får era befintliga system att hålla koll på ordrar, lager och uppföljning åt er, och säga till när ni behöver bestämma något. Byggt på en vecka, till fast pris."
+intro: "Vi får era befintliga system, som Fortnox, webbshopen och mejlen, att hålla koll på ordrar, lager och uppföljning åt er, och säga till när ni behöver bestämma något. Byggt på en vecka, till fast pris."
 cta_primary: { text: "Boka ett första samtal", href: "#kontakt" }
 cta_secondary: { text: "Se vad vi bygger →", href: "#vad-vi-bygger" }
 
