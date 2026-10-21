@@ -14,6 +14,22 @@
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:locale" content="{{ site.Language.Locale | default "sv" | replace "-" "_" }}">
 <link rel="canonical" href="{{ .Permalink }}">
+{{- if .IsHome }}
+{{- /* Structured data for search engines. The address is read from
+      params.company.address as "street, postcode, city". */}}
+{{- with site.Params.company }}
+{{- $org := dict "@context" "https://schema.org" "@type" "ProfessionalService" "name" (site.Params.brand | default site.Title) "url" site.BaseURL "description" site.Params.description "areaServed" "SE" }}
+{{- with .email }}{{ $org = merge $org (dict "email" .) }}{{ end }}
+{{- with .phone }}{{ $org = merge $org (dict "telephone" .) }}{{ end }}
+{{- with .address }}
+{{- $a := split . ", " }}
+{{- if eq (len $a) 3 }}
+{{- $org = merge $org (dict "address" (dict "@type" "PostalAddress" "streetAddress" (index $a 0) "postalCode" (index $a 1) "addressLocality" (index $a 2) "addressCountry" "SE")) }}
+{{- end }}
+{{- end }}
+<script type="application/ld+json">{{ $org | jsonify | safeJS }}</script>
+{{- end }}
+{{- end }}
 <meta name="theme-color" content="#F8F9FA">
 <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
 {{- $css := slice (resources.Get "css/fonts.css") (resources.Get "css/main.css") | resources.Concat "css/site.css" }}

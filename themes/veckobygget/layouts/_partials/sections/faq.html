@@ -5,7 +5,7 @@
       {{- range $i, $f := .Params.items }}
       <details{{ if eq $i 0 }} open{{ end }}>
         <summary>{{ $f.q }}</summary>
-        <div class="md">{{ $f.a | markdownify }}</div>
+        <div class="md">{{ $f.a | replaceRE `\{price\}` (printf "%s kr" (partial "price.html" site.Params.price)) | markdownify }}</div>
       </details>
       {{- end }}
     </div>

@@ -1,0 +1,13 @@
+<section class="section--white"{{ with .Params.anchor }} id="{{ . }}"{{ end }}>
+  <div class="section wrap split">
+    <div class="split__head">
+      <h2 class="h2">{{ .Title }}</h2>
+      {{- with .Params.text }}<p class="lead">{{ . }}</p>{{ end }}
+    </div>
+    <ul class="problems">
+      {{- range .Params.items }}
+      <li>{{ . }}</li>
+      {{- end }}
+    </ul>
+  </div>
+</section>

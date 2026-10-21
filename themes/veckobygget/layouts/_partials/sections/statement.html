@@ -1,0 +1,8 @@
+<section class="section--dark"{{ with .Params.anchor }} id="{{ . }}"{{ end }}>
+  <div class="section wrap split split--center">
+    <h2 class="h2">{{ .Title }}{{ with .Params.highlight }}<br><em>{{ . }}</em>{{ end }}</h2>
+    <div class="statement__text">
+      {{- range .Params.paragraphs }}<p>{{ . }}</p>{{ end }}
+    </div>
+  </div>
+</section>

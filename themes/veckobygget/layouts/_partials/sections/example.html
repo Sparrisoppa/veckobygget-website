@@ -1,0 +1,13 @@
+<section class="section--tint"{{ with .Params.anchor }} id="{{ . }}"{{ end }}>
+  <div class="section wrap split">
+    <div class="split__head">
+      {{- with .Params.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
+      <h2 class="h2">{{ .Title }}</h2>
+      <p class="lead">{{ .Params.text }}</p>
+    </div>
+    <div class="compare">
+      <div><span>{{ .Params.before.label }}</span><p>{{ .Params.before.text }}</p></div>
+      <div><span>{{ .Params.after.label }}</span><p>{{ .Params.after.text }}</p></div>
+    </div>
+  </div>
+</section>

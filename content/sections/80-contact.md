@@ -1,10 +1,10 @@
 ---
-title: "Redo att frigöra tid i verksamheten?"
+title: "Redo att slippa hålla allt i huvudet?"
 block: contact
 weight: 80
 nav: ""
 anchor: "kontakt"
-text: "Välj en tid i kalendern för ett förutsättningslöst samtal om era administrativa utmaningar."
+text: "Välj en tid i kalendern för ett förutsättningslöst samtal om vilka beslut som tar mest tid hos er i dag."
 person:
   name: "Mathias Kallmert"
   role: "Grundare & utvecklare"

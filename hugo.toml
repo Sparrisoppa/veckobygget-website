@@ -10,8 +10,8 @@ disableKinds = ["taxonomy", "term", "RSS"]
 
 [params]
   brand = "Veckobygget.se"
-  tagline = "Automatiserad administration och företags-AI"
-  description = "Vi hjälper svenska småföretag att effektivisera lager, logistik, marknad och sälj. Tydligt avgränsade lösningar till fast pris, byggda på en vecka."
+  tagline = "Automatisera ordrar, lager och offerter i småföretag"
+  description = "Vi kopplar ihop Fortnox, webbshop och mejl så att ordrar, inköp och offerter sköter sig. Ni godkänner. Byggt på en vecka, till fast pris."
 
   # "orange" or "green"
   accent = "orange"
@@ -24,7 +24,7 @@ disableKinds = ["taxonomy", "term", "RSS"]
   # Button at the end of the top menu. The links to the page sections are
   # generated from content/sections/ (every file with `nav` and `anchor`).
   [params.nav_cta]
-    text = "Boka gratis rådgivning"
+    text = "Boka behovssamtal"
     href = "#kontakt"
 
   # Umami analytics: copy the Website ID from Settings → Websites → Tracking code.

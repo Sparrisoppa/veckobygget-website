@@ -12,23 +12,6 @@
     header.querySelector('.nav').addEventListener('click', (e) => { if (e.target.closest('a')) set(false); });
   }
 
-  // Testimonial carousel
-  const quotes = document.querySelector('.quotes');
-  if (quotes) {
-    const texts = [...quotes.querySelectorAll('blockquote')];
-    const bys = [...quotes.querySelectorAll('.quotes__by')];
-    const cur = quotes.querySelector('[data-quote-current]');
-    let i = 0;
-    const show = (n) => {
-      i = (n + texts.length) % texts.length;
-      texts.forEach((t, k) => { t.hidden = k !== i; });
-      bys.forEach((t, k) => { t.hidden = k !== i; });
-      if (cur) cur.textContent = i + 1;
-    };
-    quotes.querySelector('[data-quote-prev]')?.addEventListener('click', () => show(i - 1));
-    quotes.querySelector('[data-quote-next]')?.addEventListener('click', () => show(i + 1));
-  }
-
   // Pay-back calculator
   const calc = document.querySelector('[data-calc]');
   if (calc) {

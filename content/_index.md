@@ -1,38 +1,39 @@
 ---
 # Home page: the hero at the top. The rest of the page is built from content/sections/.
 title: "Veckobygget.se"
-headline: "Automatiserad administration och företags-AI."
-highlight: "Byggt på en vecka."
+headline: "Automatisera administrationen i småföretaget,"
+highlight: "utan att byta system."
+intro: "Vi kopplar ihop Fortnox, webbshopen och mejlen så att de jobbar tillsammans. Ordrar, lager och kundfrågor sköts automatiskt, och ni godkänner bara det som kräver ett beslut."
+cta_primary: { text: "Boka ett gratis behovssamtal", href: "#kontakt" }
+cta_secondary: { text: "Se ett exempel", href: "#exempel" }
+# {price} is filled in from `price` in hugo.toml.
+checks:
+  - "Fast pris {price} exkl. moms"
+  - "Klart på en vecka"
+  - "Fungerar med de system ni redan har"
 
-# The price itself comes from `price` in hugo.toml.
-sticker:
-  title: "Fast pris."
-  suffix: "exkl. moms"
-  link: { text: "Räkna på vad det sparar →", href: "#rakna" }
-
-intro: "Vi hjälper svenska småföretag att effektivisera logistik, marknadsföring, kundtjänst och sälj. Inga löpande konsulttimmar – bara tydligt avgränsade lösningar till fast pris."
-cta_primary: { text: "Boka ett första samtal", href: "#kontakt" }
-cta_secondary: { text: "Se vad vi kan bygga →", href: "#vad-vi-bygger" }
-
-flow:
-  caption_left: "Exempel: AI som läser kundmejl och förbereder beslut"
-  caption_right: "AI gör förarbetet · du fattar beslutet"
-  steps:
-    - label: "1 · Kundmejl"
-      time: "08:14"
-      title: "”Samma som förra året”"
-      body: "Löparklubben Norr vill ha 200 t-shirts med tryck till sitt lopp den 14 juni."
-    - label: "2 · AI tolkar"
-      time: "08:14"
-      title: "Förstår beställningen"
-      body: "Hittar förra årets order i Fortnox: samma motiv, färg och storleksfördelning."
-    - label: "3 · AI kontrollerar"
-      time: "08:14"
-      title: "Lager & produktion"
-      body: "Tröjor finns för 160 st. Tryckeriet har plats vecka 22, så leverans hinns i tid."
-    - label: "4 · Ditt beslut"
-      time: "08:15"
-      title: "⚠ 40 tröjor måste köpas in"
-      body: "Offert och inköpsförslag är klara. Du godkänner, AI skickar."
-      decision: true
+# The example board to the right of the headline.
+# `flag` is "ok" (green) or "warn" (accent).
+board:
+  title: "Ordertavla"
+  note: "Uppdateras automatiskt från affärssystemet"
+  caption: "Exempel: nya ordrar blir kort, tillverkningen planeras och det som saknas flaggas i tid."
+  columns:
+    - name: "Ny order"
+      cards:
+        - id: "#1043"
+          text: "Bänkar, 12 st"
+          meta: "Leverans v. 47"
+    - name: "Planerad"
+      cards:
+        - id: "#1039"
+          text: "Skåp, 4 st"
+          meta: "Tillverkas 3–5 nov"
+          flag: { kind: "ok", text: "Material finns" }
+    - name: "Väntar material"
+      cards:
+        - id: "#1041"
+          text: "Skyltar, 30 st"
+          flag: { kind: "warn", text: "Saknas: 12 m² ek" }
+          meta: "Inköpsförslag klart att godkänna"
 ---

@@ -5,16 +5,17 @@ A one-page Swedish service site built with [Hugo](https://gohugo.io). All text i
 ```
 hugo.toml                   site settings: brand, accent colour, price, footer, Cal.com
 content/
-  _index.md                 hero (headline, price sticker, the AI-flow example)
+  _index.md                 hero (headline, checks, the order board example)
   sections/                 one file per block of the page, ordered by `weight`
-    10-offer.md             before / after comparison
-    20-services.md          "Vad vi bygger"
-    30-process.md           "Så fungerar det"
-    40-testimonials.md      customer quotes
+    10-problems.md          "Känner ni igen er?"
+    20-services.md          "Så får ni koll": service cards with icons
+    30-example.md           customer example with before / after
+    35-statement.md         dark band: "Systemen föreslår. Ni bestämmer."
+    40-process.md           the four steps
     50-calculator.md        pay-back calculator
     60-pricing.md           build price and support plans
     70-faq.md               questions and answers (Markdown)
-    80-contact.md           heading, Cal.com booking, contact person
+    80-contact.md           heading, contact person, Cal.com booking
 assets/images/              images used from content (resized by Hugo)
 themes/veckobygget/         the template: layouts, CSS, JS, fonts
 .github/workflows/pages.yml builds and deploys to GitHub Pages
@@ -23,7 +24,7 @@ themes/veckobygget/         the template: layouts, CSS, JS, fonts
 ## Editing content
 
 - **Text and lists**: open the file in `content/sections/` and edit the front matter (the part between `---` lines). Lists such as services, steps, quotes and FAQ items are simple `- title:` / `body:` entries; copy one to add another.
-- **Order**: change `weight` in a section file. Add a section by copying a file and changing `block` to one of `offer`, `services`, `process`, `testimonials`, `calculator`, `pricing`, `faq`, `contact`.
+- **Order**: change `weight` in a section file. Add a section by copying a file and changing `block` to one of `problems`, `services`, `example`, `statement`, `process`, `calculator`, `pricing`, `faq`, `contact`.
 - **Menu**: every section with both `nav` (label) and `anchor` (id) gets a menu link. The button at the end is `params.nav_cta` in `hugo.toml`.
 - **Price**: `price` in `hugo.toml` drives the hero sticker, the calculator and the pricing card. The two support plans have their own `price` in `60-pricing.md`.
 - **Accent colour**: `accent = "orange"` or `"green"` in `hugo.toml`. Other colours are variables at the top of `themes/veckobygget/assets/css/main.css`.

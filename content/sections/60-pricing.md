@@ -1,5 +1,5 @@
 ---
-title: "Priser & driftpaket"
+title: "Priser"
 block: pricing
 weight: 60
 nav: "Priser"
@@ -15,7 +15,7 @@ main:
     - text: "Fast pris, avtalat innan vi börjar"
     - text: "1 månad Drift & Support: Plus ingår"
       key: true
-  cta: { text: "Boka startmöte", href: "#kontakt" }
+  cta: { text: "Boka behovssamtal", href: "#kontakt" }
 plans:
   - name: "Drift & Support: Bas"
     tag: "Löpande trygghet"
@@ -30,4 +30,5 @@ plans:
     text: "Allt i Bas, plus **2 timmar varje månad*** för att justera och vidareutveckla lösningen i takt med att verksamheten förändras."
     footnote: "* Timmar sparas i upp till 3 månader"
     cta: { text: "Välj Plus →", href: "#kontakt" }
+note: "Driftpaketen är frivilliga och förnyas inte automatiskt. Löpande kostnader för till exempel AI-tjänster brukar landa på några hundra kronor i månaden och betalas direkt till leverantören."
 ---
