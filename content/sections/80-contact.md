@@ -4,6 +4,8 @@ block: contact
 weight: 80
 nav: ""
 anchor: "kontakt"
+# Opens the Cal.com calendar below when [params.cal] link is set, otherwise an e-mail.
+button: "Boka ett samtal"
 text: "Välj en tid i kalendern för ett förutsättningslöst samtal om vilka beslut som tar mest tid hos er i dag."
 person:
   name: "Mathias Kallmert"
