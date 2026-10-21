@@ -1,14 +1,13 @@
 ---
-title: "Berätta var ni tappar koll. Vi säger om det går på en vecka."
+title: "Redo att slippa hålla allt i huvudet?"
 block: contact
 weight: 80
+nav: ""
 anchor: "kontakt"
-text: "Boka 30 minuter. Ni får en ärlig bedömning, även om svaret är att det inte lönar sig."
-# Opens the Cal.com calendar below when [params.cal] link is set, otherwise an e-mail.
-button: "Boka tid i kalendern"
+text: "Välj en tid i kalendern för ett förutsättningslöst samtal om vilka beslut som tar mest tid hos er i dag."
 person:
   name: "Mathias Kallmert"
-  role: "Grundare och utvecklare"
+  role: "Grundare & utvecklare"
   photo: "images/mathias.png"
-  text: "Du har samma kontakt från första samtal till leverans."
+  text: "Du bokar samtalet med mig. Jag har lång erfarenhet av kvalitetssäkrade mjukvaruprojekt och är din kontakt från första samtal till leverans."
 ---

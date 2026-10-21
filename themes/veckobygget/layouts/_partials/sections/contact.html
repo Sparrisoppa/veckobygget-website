@@ -1,35 +1,21 @@
-{{- $cal := site.Params.cal }}
-{{- $company := site.Params.company }}
-<section class="section--tint"{{ with .Params.anchor }} id="{{ . }}"{{ end }}>
+<section class="section--dark dark"{{ with .Params.anchor }} id="{{ . }}"{{ end }}>
   <div class="section wrap contact">
-    <div class="split split--center">
-      <div class="split__head">
-        <h2 class="h2">{{ .Title }}</h2>
-        <p class="lead">{{ .Params.text }}</p>
-        {{- if $cal.link }}
-        <a class="btn" href="#boka">{{ .Params.button }}</a>
-        {{- else }}{{ with $company.email }}
-        <a class="btn" href="mailto:{{ . }}">{{ $.Params.button }}</a>
-        {{- end }}{{ end }}
-      </div>
-      {{- with .Params.person }}
-      <div class="person">
-        {{- with .photo }}{{ with resources.Get . }}
-        {{- $img := .Resize "192x webp q85" }}
-        <img src="{{ $img.RelPermalink }}" width="96" height="96" alt="{{ $.Params.person.name }}" loading="lazy">
-        {{- end }}{{ end }}
-        <div class="person__text">
-          <strong>{{ .name }}</strong>
-          <span class="person__role">{{ .role }}</span>
-          <p>{{ .text }}</p>
-          {{- with $company.email }}<a href="mailto:{{ . }}">{{ . }}</a>{{ end }}
-          {{- with $company.phone }}<a href="tel:{{ replaceRE `[^0-9+]` "" . }}">{{ . }}</a>{{ end }}
-        </div>
-      </div>
-      {{- end }}
+    <div class="contact__head">
+      <h2>{{ .Title }}</h2>
+      <p>{{ .Params.text }}</p>
     </div>
-    {{- if $cal.link }}
-    <div id="boka">{{ partial "booking.html" . }}</div>
+    {{- partial "booking.html" . }}
+    {{- with .Params.person }}
+    <div class="person">
+      {{- with .photo }}{{ with resources.Get . }}
+      {{- $img := .Resize "176x webp q85" }}
+      <img src="{{ $img.RelPermalink }}" width="88" height="88" alt="{{ $.Params.person.name }}" loading="lazy">
+      {{- end }}{{ end }}
+      <div class="person__text">
+        <div class="person__name"><strong>{{ .name }}</strong><span>{{ .role }}</span></div>
+        <p>{{ .text }}</p>
+      </div>
+    </div>
     {{- end }}
   </div>
 </section>

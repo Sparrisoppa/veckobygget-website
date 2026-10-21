@@ -5,7 +5,7 @@ A one-page Swedish service site built with [Hugo](https://gohugo.io). All text i
 ```
 hugo.toml                   site settings: brand, accent colour, price, footer, Cal.com
 content/
-  _index.md                 hero (headline, checks, price sticker, the order board example)
+  _index.md                 hero (headline, checks, the order board example)
   sections/                 one file per block of the page, ordered by `weight`
     10-problems.md          "Känner ni igen er?"
     20-services.md          "Så får ni koll": service cards with icons

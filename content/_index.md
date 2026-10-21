@@ -13,12 +13,6 @@ checks:
   - "Klart på en vecka"
   - "Fungerar med de system ni redan har"
 
-# The price itself comes from `price` in hugo.toml.
-sticker:
-  title: "Fast pris."
-  suffix: "exkl. moms"
-  link: { text: "Räkna på vad det sparar →", href: "#rakna" }
-
 # The example board to the right of the headline.
 # `flag` is "ok" (green) or "warn" (accent).
 board:

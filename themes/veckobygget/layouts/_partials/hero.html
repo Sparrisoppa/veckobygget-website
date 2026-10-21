@@ -37,13 +37,6 @@
         <figcaption>{{ .caption }}</figcaption>
       </figure>
       {{- end }}
-      {{- with $p.sticker }}
-      <div class="sticker">
-        <strong>{{ .title }}</strong>
-        <span>{{ $price }} {{ .suffix }}</span>
-        {{- with .link }}<a href="{{ .href }}">{{ .text }}</a>{{ end }}
-      </div>
-      {{- end }}
     </div>
   </div>
 </section>
