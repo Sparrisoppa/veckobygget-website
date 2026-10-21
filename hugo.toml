@@ -34,7 +34,6 @@ disableKinds = ["taxonomy", "term", "RSS"]
     script_url = "https://cloud.umami.is/script.js"  # change for self-hosted Umami
 
   # Footer.
-  footer_text = "Automatiserad administration för småföretag i Stockholm, Värmdö och hela Sverige"
   [params.company]
     name = "Veckobygget Konsult"
     legal = [
