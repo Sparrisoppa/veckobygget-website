@@ -3,13 +3,13 @@
 title: "Veckobygget.se"
 headline: "Automatisera administrationen i småföretaget,"
 highlight: "utan att byta system."
-intro: "Vi kopplar ihop Fortnox, webbshopen och mejlen så att de jobbar tillsammans. Ordrar, lager och kundfrågor sköts automatiskt, och ni godkänner bara det som kräver ett beslut."
+intro: "Vi kopplar ihop affärssystem, webbshopen och mejlen så att allt jobbar tillsammans. Ordrar, lager och kundfrågor sköts automatiskt, och ni godkänner bara det som kräver ett beslut."
 cta_primary: { text: "Boka ett gratis behovssamtal", href: "#kontakt" }
 cta_secondary: { text: "Se ett exempel", href: "#exempel" }
 # {price} is filled in from `price` in hugo.toml.
 checks:
   - "Fast pris {price} exkl. moms"
-  - "Klart på en vecka"
+  - "Byggt på en vecka"
   - "Fungerar med de system ni redan har"
 
 # The example board to the right of the headline.
