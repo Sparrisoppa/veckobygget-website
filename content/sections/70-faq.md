@@ -10,8 +10,6 @@ items:
     a: "Nej, och det är hela poängen. Vi bygger ovanpå de program ni redan har och får dem att fungera som ni jobbar."
   - q: "Vilka system kan ni koppla ihop och automatisera?"
     a: "De flesta vanliga system, till exempel Fortnox, Visma, Shopify, WooCommerce, HubSpot, Google Workspace och Microsoft 365, och även mejl och kalkylark."
-börjar ta slut eller påminner om offerter som inte fått svar."
-offereras och följas upp."
   - q: "Vad händer om bygget tar mer än 32 timmar?"
     a: "Leveransbeskrivningen är avgränsad så att den ryms i 32 timmar. Skulle något ändå dra över gör vi klart det som ingår i leveransbeskrivningen utan extra kostnad."
   - q: "När kan ni leverera?"
