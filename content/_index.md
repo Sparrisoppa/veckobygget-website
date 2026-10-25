@@ -3,7 +3,7 @@
 title: "Veckobygget.se"
 headline: "Automatisera administrationen i småföretaget,"
 highlight: "utan att byta system."
-intro: "Vi kopplar ihop affärssystem, webbshopen och mejlen så att allt jobbar tillsammans. Ordrar, lager och kundfrågor sköts automatiskt, och ni godkänner bara det som kräver ett beslut."
+intro: "Vi kopplar ihop ert affärssystem, er webbshop och e-post så att allt samverkar, blir enkelt att överblicka och passar just er verksamhet."
 cta_primary: { text: "Boka ett gratis behovssamtal", href: "#kontakt" }
 cta_secondary: { text: "Se ett exempel", href: "#exempel" }
 # {price} is filled in from `price` in hugo.toml.
