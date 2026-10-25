@@ -12,7 +12,7 @@ main:
   features:
     - text: "32 timmars arbete: teknisk design, utveckling, test och dokumentation."
     - text: "Kopplat till de system ni redan använder"
-    - text: "Fast pris, avtalat innan vi börjar"
+    - text: "Tydligt specificerat vad som ska levereras"
     - text: "1 månad Drift & Support: Plus ingår"
       key: true
   cta: { text: "Boka behovssamtal", href: "#kontakt" }
@@ -30,5 +30,4 @@ plans:
     text: "Allt i Bas, plus **2 timmar varje månad*** för att justera och vidareutveckla lösningen i takt med att verksamheten förändras."
     footnote: "* Timmar sparas i upp till 3 månader"
     cta: { text: "Välj Plus →", href: "#kontakt" }
-note: "Driftpaketen är frivilliga och förnyas inte automatiskt. Löpande kostnader för till exempel AI-tjänster brukar landa på några hundra kronor i månaden och betalas direkt till leverantören."
 ---
