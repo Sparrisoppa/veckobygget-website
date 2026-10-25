@@ -4,10 +4,11 @@ block: problems
 weight: 10
 nav: "Känner ni igen er?"
 anchor: "kanner-ni-igen-er"
-text: "Verksamheten borde kunna fungera bättre än den gör idag."
+text: "Er verksamhet har vuxit, men era system och arbetssätt hänger inte helt med."
 items:
-  - "Ni har inte full koll på material och ordrar."
-  - "Ni ägnar lång tid åt att svara på kundfrågor."
-  - "Ni saknar översikt."
-  - "Ni har processer som sitter i era huvuden."
+  - "Viktig information sitter i huvudet på enskilda personer istället för i era system."
+  - "Ni lägger onödig tid på att manuellt flytta data mellan webbshop, mejl och affärssystem."
+  - "Det går åt mycket tid till att besvara återkommande kundfrågor om orderstatus och leveranser."
+  - "Det är svårt att få en exakt bild av lagersaldo och materialbehov i realtid."
+  - "Ni saknar underlag för att snabbt se vilka affärer eller projekt som faktiskt är lönsamma."
 ---
