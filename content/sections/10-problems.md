@@ -4,10 +4,10 @@ block: problems
 weight: 10
 nav: "Känner ni igen er?"
 anchor: "kanner-ni-igen-er"
-text: "Det är inget fel på era existerande system. Komplexiteten har bara ökat så pass att det är svårt att hålla koll."
+text: "Verksamheten borde kunna fungera bättre än den gör idag."
 items:
-  - "Ni har inte koll på vilka ordrar som ska göras när."
-  - "Ni ägnar för lång tid åt att svara på enkla kundfrågor."
+  - "Ni har inte full koll på material och ordrar."
+  - "Ni ägnar lång tid åt att svara på kundfrågor."
   - "Ni saknar översikt."
   - "Ni har processer som sitter i era huvuden."
 ---
