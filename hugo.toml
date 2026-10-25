@@ -11,7 +11,7 @@ disableKinds = ["taxonomy", "term", "RSS"]
 [params]
   brand = "Veckobygget.se"
   tagline = "Automatisera ordrar, lager och offerter i småföretag"
-  description = "Vi kopplar ihop Fortnox, webbshop och mejl så att ordrar, inköp och offerter sköter sig. Ni godkänner. Byggt på en vecka, till fast pris."
+  description = "Vi kopplar ihop affärssystem, webbshop och mejl så att allt samverkar enligt era processer. Ni godkänner. Byggt på en vecka, till fast pris."
 
   # "orange" or "green"
   accent = "orange"
