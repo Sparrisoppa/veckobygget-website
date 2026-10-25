@@ -36,9 +36,11 @@ input,textarea,button{font:inherit}
 .section{padding-block:clamp(64px,9vw,112px)}
 .section--flush-bottom{padding-bottom:0}
 .section--white{background:var(--white);border-top:1px solid rgba(26,34,56,.1)}
+.section--band{border-bottom:1px solid rgba(26,34,56,.1)}
 .section--dark{background:var(--ink);color:var(--paper)}
 .stack{display:flex;flex-direction:column}
 [id]{scroll-margin-top:var(--header-h)}
+#top{scroll-margin-top:0}
 
 .h2{font-size:clamp(32px,4.4vw,56px);line-height:1.02;letter-spacing:-.035em;font-weight:700;text-wrap:balance}
 .mono{font-family:var(--mono)}
@@ -156,7 +158,7 @@ input,textarea,button{font:inherit}
 /* ---------- Calculator ---------- */
 .calc__intro{display:flex;flex-direction:column;gap:14px;max-width:760px}
 .calc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));border:1.5px solid var(--ink);margin-top:40px}
-.calc__in{padding:clamp(24px,3.5vw,40px);display:flex;flex-direction:column;gap:36px;background:var(--white)}
+.calc__in{padding:clamp(24px,3.5vw,40px);display:flex;flex-direction:column;gap:36px;background:var(--paper)}
 .calc label{display:flex;flex-direction:column;gap:14px}
 .calc__row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
 .calc__row span{font-size:18px;font-weight:600}
