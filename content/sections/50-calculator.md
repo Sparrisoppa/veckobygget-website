@@ -3,7 +3,7 @@ title: "Vad är er tid värd?"
 block: calculator
 weight: 50
 anchor: "rakna"
-intro: "Räkna på hur mycket tid som går till manuellt arbete i dag, och se när bygget är betalt."
+intro: "Räkna på hur mycket tid som går till manuellt arbete i dag, och se när bygget för att automatisera det är betalt."
 hours:
   label: "Timmar per vecka på att planera, leta och följa upp"
   hint: "T.ex. orderplanering, lagerkoll, inköp, offerter och att svara kunder"
