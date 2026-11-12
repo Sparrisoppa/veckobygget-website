@@ -8,14 +8,14 @@ hours:
   label: "Timmar per vecka på att planera, leta och följa upp"
   hint: "T.ex. orderplanering, lagerkoll, inköp, offerter och att svara kunder"
   min: 1
-  max: 20
+  max: 9
   step: 1
-  default: 4
+  default: 5
 rate:
   label: "Kostnad per arbetstimme"
   hint: "Lön + arbetsgivaravgifter. En vanlig nivå är 400–500 kr"
   min: 300
-  max: 1000
+  max: 600
   step: 50
   default: 450
 weeks_per_year: 46
