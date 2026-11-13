@@ -226,6 +226,9 @@ input,textarea,button{font:inherit}
 .person__name{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
 .person__name strong{font-size:20px;letter-spacing:-.01em}
 .person__name span{font-family:var(--mono);font-size:13px;color:rgba(248,249,250,.65)}
+.person__links{display:inline-flex;gap:8px;align-self:center}
+.person__links a{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border:1px solid rgba(248,249,250,.25);color:rgba(248,249,250,.75);transition:color .15s,border-color .15s}
+.person__links a:hover,.person__links a:focus-visible{color:var(--acc);border-color:var(--acc)}
 .person p{font-size:17px;line-height:1.55;color:rgba(248,249,250,.82);text-wrap:pretty}
 
 /* ---------- Footer ---------- */
