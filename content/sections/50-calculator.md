@@ -17,7 +17,7 @@ rate:
   min: 300
   max: 600
   step: 50
-  default: 450
+  default: 400
 weeks_per_year: 46
 payback_label: "Betalt på"
 year_hours_label: "Frigjord tid per år"

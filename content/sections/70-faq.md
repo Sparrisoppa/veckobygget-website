@@ -2,7 +2,7 @@
 title: "Vanliga frågor om automatisering"
 block: faq
 weight: 70
-# Answers are Markdown. The first question starts open. {price} is filled in from hugo.toml.
+# Answers are Markdown. {price} is filled in from hugo.toml.
 items:
   - q: "Vad hinner man få gjort på en vecka?"
     a: "Ofta mer än man tror. En vecka räcker för att ta hand om de beslut som tar mest tid hos er i dag, och det kan gott vara flera. Det kan vara att kundmejl blir färdiga offertförslag, att nya ordrar planeras in och stäms av mot lagret, eller en daglig lista över kunder och offerter som behöver följas upp. Vad som ingår bestämmer vi tillsammans i leveransbeskrivningen innan vi börjar."

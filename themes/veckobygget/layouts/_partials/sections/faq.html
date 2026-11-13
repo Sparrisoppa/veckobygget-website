@@ -2,8 +2,8 @@
   <div class="section wrap faq">
     <h2 class="h2">{{ .Title }}</h2>
     <div class="faq__list">
-      {{- range $i, $f := .Params.items }}
-      <details{{ if eq $i 0 }} open{{ end }}>
+      {{- range $f := .Params.items }}
+      <details>
         <summary>{{ $f.q }}</summary>
         <div class="md">{{ $f.a | replaceRE `\{price\}` (printf "%s kr" (partial "price.html" site.Params.price)) | markdownify }}</div>
       </details>
